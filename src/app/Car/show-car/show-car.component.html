@@ -1,0 +1,84 @@
+<section data-aos="fade-up" data-aos-easing="ease-in-sine">
+  <div class=" car-detail-slider">
+      <div class="overLay">
+        <div class=" row container m-auto h-100  py-5 d-flex  justify-content-start align-items-center">
+          <div class="col-lg-6 p-lg-5 text-white flex-column  d-flex  justify-content-center align-items-center justify-content-lg-start align-items-lg-start ">
+            <h2 class="text-center text-lg-start fw-bold ">{{car.brand.name}} {{car.name|uppercase}} {{car.details.modelYear}}</h2>
+            <p class="d-none d-md-inline-block text-center text-lg-start my-3">Step into a world of discounted automotive brilliance at our showroom, where luxury meets affordability, providing you with an opportunity to drive home your dream car at an unprecedented value</p>
+            <div class="btns d-none d-lg-inline-block">
+              <button class="btn bg-Green  px-4" routerLink="/cars/all">Book Your Car Now</button>
+            </div>
+          </div>
+          <img  src="https://localhost:7221/Uploads/Photoes/{{car.photoes[0].url}}" alt="{{car.photoes[0].url}}" class=" col-lg-6 d-none d-lg-inline-block" />
+        </div>
+      </div>
+    </div>
+</section>
+<section *ngIf='car.details' data-aos="fade-up" data-aos-easing="ease-in-sine">
+  <div class="container py-5" >
+      <h2 class="d-md-inline-block d-lg-block  text-lg-center px-3 text-darkGreen">Specifications</h2>
+      <div class="Specifications-content py-5 text-darkGreen">
+        <div class="row m-auto" data-aos="fade-up" data-aos-easing="ease-in-sine">
+          <div class="Specifications-content-container col-lg-6 ">
+            <ul class="list-unstyled ">
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>Color</span><span>{{car.color}}</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>max Power</span><span>{{car.details.maxPower}} KW</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>torque</span><span>{{car.details.torque}} N.m</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>dimentions</span><span>{{car.details.length}}*{{car.details.width}}*{{car.details.height}}</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>curbWeight</span><span>{{car.details.curbWeight}} Kg</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>panoramic</span><span>{{car.details.panoramic}}</span></li>
+            </ul>
+        </div>
+        <div class="Specifications-content-container col-lg-6">
+            <ul class="list-unstyled">
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>cltC_Cruising Range</span><span>{{car.details.cltC_CruisingRange}} Km</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>maximum speed</span><span>{{car.details.maximumSspeed}} Km/h</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>battery Energy</span><span>{{car.details.batteryEnergy}} KWh</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>acceleration</span><span>{{car.details.acceleration}} s</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>cameras</span><span>{{car.details.cameras}}</span></li>
+                <li class="d-flex justify-content-between  py-3 border-bottom"><span>price</span><span>{{car.price}} LE</span></li>
+            </ul>
+        </div>
+        </div>
+
+      </div>
+  </div>
+</section>
+<section>
+<div class="container pb-5" >
+  <div class="row gy-3 mb-3 "data-aos="fade-left" data-aos-easing="ease-in-sine" >
+    <div class="col-lg-12"    data-aos="fade-up" data-aos-easing="ease-in-sine" >
+      <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[1].url}}" alt="{{car.photoes[1].url}}">
+      </div>
+    <div class="col-lg-8" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+    <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[2].url}}" alt="{{car.photoes[2].url}}">
+    </div>
+    <div class="col-lg-4 " data-aos="fade-up" data-aos-easing="ease-in-sine"  data-aos-duration="2500" >
+      <div class="row gy-3" >
+        <div class="col-lg-12 col-sm-6 rounded" >
+          <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[3].url}}" alt="{{car.photoes[3].url}}">
+        </div>
+        <div class="col-lg-12 col-sm-6 rounded" data-aos="fade-up" data-aos-easing="ease-in-sine"  >
+          <img class="img-fluid rounded"src="https://localhost:7221/Uploads/Photoes/{{car.photoes[4].url}}" alt="{{car.photoes[4].url}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row gy-3 mb-3" data-aos="fade-right" data-aos-easing="ease-in-sine" >
+    <div class="col-lg-4"  data-aos="fade-up" data-aos-easing="ease-in-sine"  data-aos-duration="4500" >
+      <div class="row gy-3">
+        <div class="col-lg-12 col-sm-6 rounded" >
+          <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[5].url}}" alt="{{car.photoes[5].url}}">
+        </div>
+        <div class="col-lg-12 col-sm-6 rounded">
+          <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[6].url}}" alt="{{car.photoes[6].url}}">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8"  data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="6500">
+      <img class="img-fluid rounded" src="https://localhost:7221/Uploads/Photoes/{{car.photoes[7].url}}" alt="{{car.photoes[7].url}}">
+      </div>
+  </div>
+</div>
+</section>
+

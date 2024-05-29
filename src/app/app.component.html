@@ -1,0 +1,9 @@
+
+<div id="loading" class="loading-div" *ngIf="LoadingService.spinnerCounter$| async">
+    <span class="loader"></span>
+</div>
+<app-scroll-to-top></app-scroll-to-top>
+<!--*ngIf="LoadingService.spinnerCounter$ | async"-->
+<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
+    <router-outlet></router-outlet>
+<!-- </div> -->

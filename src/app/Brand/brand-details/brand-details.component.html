@@ -1,0 +1,11 @@
+
+<section class="py-5 bg-white">
+  <div class="container py-5 ">
+    <h2 class="d-md-inline-block d-lg-block text-lg-center px-3" data-aos="fade-up" >{{Brand.name}}</h2>
+      <div class="row cars py-5">
+          <div class="col-lg-4 col-sm-6 mx-auto " *ngFor="let car of Cars"  >
+            <app-car-item [ParamNum]="car.id" data-aos="fade-up"></app-car-item>
+          </div>
+      </div> 
+  </div>    
+</section>

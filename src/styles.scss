@@ -1,0 +1,75 @@
+@import 'assets/Styles/colors';
+*{
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: 3px;
+    scrollbar-track-color: $light;
+    scrollbar-color: $darkMain;
+}
+body{
+   transition: all .5s ease-in ;
+}
+.container{
+    overflow: hidden;
+}
+@media screen and (max-width:992px) {
+    .container{
+        padding-right: 7% !important;
+        padding-left: 7% !important;
+        overflow: hidden;
+    }
+}
+.bg-Green{
+   background-color: $main !important;
+   border: $main 1px solid !important;
+   color: $light !important;
+   transition: all  .5s;
+}
+p,h2,span{
+    text-transform: capitalize;
+}
+.bg-Green:hover{
+    background-color:$light !important;
+    border-color: $light;
+    color:$main !important
+}
+.bg-white{
+    background-color: $light;
+}
+.btn-white{
+  background-color: $light !important;
+  border: 1px solid $main  !important;
+  color: $main !important;
+  &:hover{
+    background-color: $main  !important;
+    color: $light !important;
+  }
+}
+.btn-Green{
+  background-color: $main  !important;
+  border: 1px solid $main !important;
+  color: $light !important;
+  &:hover{
+    background-color: $light  !important;
+    color: $main !important;
+  }
+}
+.bg-darkGreen{
+    background-color: $darkMain;
+}
+.text-white{
+    color: $light !important;
+}
+.text-Green{
+    color:$main !important
+}
+.out-line-Green{
+    border: 1px solid $main;
+}
+.text-darkGreen{
+    color:$darkMain !important;
+}
+

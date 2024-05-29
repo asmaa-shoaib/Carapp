@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg" [class.scrolledNav]="scroll" id="topNav">
+  <div class="container">
+    <a class="navbar-brand"  routerLink="/home"><img class="img-fluid" *ngIf="scroll==true" src="../../assets/images/Home/Logo.svg"><img class="img-fluid" *ngIf="scroll!=true" src="../../assets/images/Home/WLogo.svg"></a>
+    <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon " [class.white-icon]="!scroll" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class=" nav-link   text-white px-xl-3 px-lg-2" [class.active]="ActiveLink=='home'"(click)="gotoThis($event)" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item px-xl-3 px-lg-2  ">
+          <a class=" nav-link text-white" [class.active]="ActiveLink=='about'"  (click)="gotoThis($event)">About</a>
+        </li>
+        <li class="nav-item px-xl-3 px-lg-2  ">
+          <a class=" nav-link text-white" [class.active]="ActiveLink=='all'" (click)="gotoThis($event)">all</a>
+        </li>
+        <li class="nav-item px-xl-3 px-lg-2  ">
+          <a class=" nav-link text-white"  [class.active]="ActiveLink=='car'" (click)="gotoThis($event)">Car</a>
+        </li>
+        <li class="nav-item px-xl-3 px-lg-2">
+          <a class="nav-link text-white"  [class.active]="ActiveLink=='branches'"  (click)="gotoThis($event)">Branches</a>
+        </li>
+        <li class="nav-item  px-xl-3 px-lg-2  ">
+          <a class="nav-link text-white" href="https://wa.me/c/201027206017">Contact Us</a>
+        </li>
+
+        <li class="nav-item px-xl-3 px-lg-2 ">
+          <a class="nav-link btn nav-btn bg-white text-Green px-md-4 " href="https://www.facebook.com/messages/t/102449004524299">Get your car</a>
+        </li>
+        <li class="nav-item  px-xl-3 px-lg-2  ">
+          <a class="nav-link compare" routerLink="/cars/compare"><img *ngIf="scroll==true" src="../../assets/images/compare/Vector.svg"><img *ngIf="scroll!=true" src="../../assets/images/compare/VectorLight.svg"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

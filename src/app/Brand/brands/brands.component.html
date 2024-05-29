@@ -1,0 +1,33 @@
+<section class="brands-section ">
+  <div class="py-md-5 py-lg-5 py-2">
+    <div id="carouselExampleAutoplaying" class="carousel slide Brands" data-bs-ride="carousel">
+      <div class="carousel-inner ">
+        <div class="carousel-item active ">
+          <div class="row">
+            <div class="text-center brand col" *ngFor="let brand of FirstArr">
+              <a routerLink="/brands/details/{{brand.id}}"><img *ngIf="!brand.imageUrl" src="../../../assets/images/favicon.ico"></a>
+              <a routerLink="/brands/details/{{brand.id}}"><img *ngIf="brand.imageUrl" class="img-fluid " src="https://localhost:7221/Uploads/Brands/{{brand.imageUrl}}"></a>  
+            </div> 
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="text-center brand col" *ngFor="let brand of SecondArr">
+              <a routerLink="/brands/details/{{brand.id}}"><img *ngIf="!brand.imageUrl" src="../../../assets/images/favicon.ico"></a>
+              <a routerLink="/brands/details/{{brand.id  }}"><img *ngIf="brand.imageUrl" class="img-fluid " src="https://localhost:7221/Uploads/Brands/{{brand.imageUrl}}"></a>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+    </div>
+</section> 
+

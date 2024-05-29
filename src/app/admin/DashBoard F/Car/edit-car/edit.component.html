@@ -1,0 +1,38 @@
+<div class="container py-5">
+    <form class="form"  [formGroup]="form"  >
+        <div class="form-group py-2">
+            <input type="text" class="form-control" formControlName="name" placeholder="Branch Name" >
+            <div class="form-valiation" *ngIf='form.controls["name"].invalid && form.controls["name"].touched ||form.controls["name"].dirty' >
+                <small class="text-danger">required</small>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="form-group  col-4">
+                <input type="text" class="form-control"  formControlName="price"  placeholder="Car price" />
+                <div class="form-valiation" *ngIf='form.controls["price"].invalid && form.controls["price"].touched ||form.controls["color"].dirty' >
+                    <small class="text-danger" *ngIf='form.controls["price"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-4">
+                <input type="text" class="form-control" formControlName="color"  placeholder="Car color" />
+                    <div class="form-valiation" *ngIf='form.controls["color"].invalid && form.controls["color"].touched ||form.controls["color"].dirty' >
+                        <small class="text-danger" *ngIf='form.controls["color"].hasError("required")'>required</small>
+                    </div>
+            </div>
+            <div class="form-group col-4">
+                <select class="form-select" formControlName="brandId">
+                    <option *ngFor="let brand of Brands"  [ngValue]="brand.id" >{{brand.name}}</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <div type="checkbox">
+                    <input id="my-input" class="form-check-input" type="checkbox" formControlName="bestSeller" [checked]="car.bestseller" (change)="onChangeBestSeller($event)" >
+                    <label for="my-input" class="form-check-label">bestSeller</label>
+                </div>
+            </div> 
+        </div>
+        <div class="py-5" >
+            <button type="submit" class="btn btn-success" (click)="EditCar()" [disabled]="form.invalid"  >Edit Car</button>
+        </div>
+    </form>
+</div>

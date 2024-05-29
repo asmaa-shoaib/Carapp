@@ -1,0 +1,25 @@
+@import '../../../assets/Styles/colors';
+section{
+    background-color: $lightGray;
+}
+.active{ 
+    position: relative;
+}
+.active .car{
+    opacity: 0;
+    transition: opacity .5s;
+}
+.active:hover .car{
+    opacity: 1;
+} 
+.active>img{
+    position: absolute;
+    z-index: 10;
+    top: 15%;
+    opacity: 1;
+    transition: opacity .5s;
+}
+.active:hover img{
+    opacity: 0;
+    z-index: 1;
+}

@@ -1,0 +1,17 @@
+     <div class="card">
+      <div class="card-body ">
+        <h4 class="text-darkGreen text-center" >{{Branch.governoment}}</h4>
+        <div class="Specifications-content d-flex justify-content-between  text-darkGreen  ">
+          <div class="Specifications-content-container">
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-start align-items-start py-1 w-75"><img class="detail-icon px-1"  src="../../../assets/images/icons/map-solid.svg"><span class="w-75">{{Branch.name}}</span></li>
+              <li class="d-flex justify-content-start align-items-start py-1"><img class="detail-icon px-1" src="../../../assets/images/icons/mobile-solid.svg"><span>0{{Branch.phone1}}</span><span *ngIf="Branch.phone2"> - 0{{Branch.phone2}}</span></li>
+              <li class="d-flex justify-content-start align-items-start py-1"><img class="detail-icon px-1" src="../../../assets/images/icons/phone-solid.svg"><span>0{{Branch.mobile}}</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer  d-flex justify-content-center align-items-center ">
+        <a href="{{Branch.location}}" class="btn bg-Green mx-auto px-4 card-link">open in map</a>
+      </div>
+    </div> 

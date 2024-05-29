@@ -1,0 +1,76 @@
+<!-- <div class="container">
+    <span class="badge badge-primary">Text</span>
+    <form>
+        <div class="form-group">
+            <label class="">Name</label>
+            <input class="form-control" type="text" #name>
+        </div>
+    </form>
+    <br>
+    <button class="btn btn-primary" (click)="addCar(name.value)">add car</button>
+    <h2 class="text-center" *ngIf="Tasks.length>0">the cars</h2>
+    <div *ngIf="Tasks.length>0" class="cars">
+        <h1 *ngIf="numOfNotDone()>=1">{{numOfNotDone()}}</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>CarId</th>
+                    <th>Name</th>
+                    <th>Done?</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr *ngFor="let task of Tasks;let currentIndex=index">
+                <td> {{currentIndex}}</td>
+                <td  [ngClass]="{'Done':task.Done}"> {{task.Name}}</td>
+                <td><input type="checkbox" (change)="changeStatus(task)"></td>
+                <td> <button class="btn btn-danger" (click)="removeCar(currentIndex)">Delete</button></td>
+            </tr>
+           </tbody>
+
+        </table>
+    </div>
+</div> -->
+<!-- <div class="container">
+    <h2 class="text-center">Cars in the site{{Cars.length}}</h2>
+    <div class="row">
+        <div *ngFor="let car of Cars" class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{car.name}}</h4>
+                    <a href="#" class="link-primary">{{car.brand.name}} brand</a>
+                    <p class="card-text">{{car.color}}</p>
+                    <p class="card-text">{{car.price}}</p>
+                    <p class="card-text" *ngIf="car.details!=null">Name: {{car.details.name}}, vilocty:{{car.details.vilocty}}</p>
+                    <a href="#" class="btn btn-primary" >open details</a>
+                </div>
+                <img class="card-img-bottom" *ngIf="car.photoes.length>0" src="src/assets/images/favicon.ico" alt="{{car.photoes[0].url}}" style="width:100%">
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container py-5">
+
+<app-search-bar></app-search-bar>
+  <h2 class="d-md-inline-block d-lg-block  text-lg-center px-3">Cars</h2>
+  <!-- <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div> -->
+  <div class="btns btn-group d-block text-end">
+     <button class="btn btn-white" (click)="sortByPrice()">price</button>
+    <button class="btn btn-Green" (click)="sortByName()">name</button>
+  </div>
+    <div class="row cars py-5">
+        <div class="col-lg-4 col-md-6 col-10 m-auto" *ngFor="let car of Cars;let c =index">
+            <app-car-item *ngIf="car.details"  [ParamNum]=car.id></app-car-item>
+        </div>
+    </div>
+</div>

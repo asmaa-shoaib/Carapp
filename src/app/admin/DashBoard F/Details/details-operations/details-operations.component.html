@@ -1,0 +1,45 @@
+<div class="container py-5 details-table">
+    <div class="btns py-3"><button routerLink="/dashboard/addDetail" class="btn btn-success">Add Detail</button></div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>s</th>
+                <th>ID</th>
+                <th>description</th>
+                <th>modelYear</th>
+                <th>maxPower</th>
+                <th>torque</th>
+                <th>Dimentions</th>
+                <th>curbWeight</th>
+                <th>batteryEnergy</th>
+                <th>cltC_CruisingRange</th>
+                <th>maximumSspeed</th>
+                <th>cameras</th>
+                <th>panoramic</th>
+                <th>batteryEnergy</th>
+                <th>carId</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of Details;let c =index"> 
+                <td>{{c}}</td>
+                <td>{{detail.id}}</td>
+                <td>{{detail.description}}</td>
+                <td>{{detail.modelYear}}</td>
+                <td>{{detail.maxPower}}</td>
+                <td>{{detail.torque}}</td>
+                <td>{{detail.length}} | {{detail.width}} | {{detail.height}}</td>
+                <td>{{detail.curbWeight}}</td>
+                <td>{{detail.batteryEnergy}}</td>
+                <td>{{detail.cltC_CruisingRange}}</td>
+                <td>{{detail.maximumSspeed}}</td>
+                <td>{{detail.cameras}}</td>
+                <td>{{detail.panoramic}}</td>
+                <td>{{detail.batteryEnergy}}</td>
+                <td>{{detail.carId}}</td>
+                <td><a class="btn btn-success" routerLink="/dashboard/detail/edit/{{detail.id}}">Edit</a></td>
+            </tr>
+        </tbody> 
+    </table>
+    </div>

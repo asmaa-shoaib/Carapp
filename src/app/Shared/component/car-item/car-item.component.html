@@ -1,0 +1,34 @@
+    <div class="card mb-3">
+      <div class="card-img-container rounded ">
+        <div class="overLay rounded">
+          <img src="https://localhost:7221/Uploads/Photoes/{{car.photoes[0].url}}" alt="https://localhost:7221/Uploads/Photoes/{{car.photoes[0]}}" class=" card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="text-darkGreen text-center"><a  class="card-title text-decoration-none" routerLink="/brands/details/{{car.brand.id}} ">{{car.brand.name}}</a> <a  class="card-title text-decoration-none" routerLink="/cars/detail/{{car.id}}"> {{car.name}} <span >{{car.details.modelYear}}</span></a></h5>
+
+        <div class="Specifications-content d-flex justify-content-between  text-darkGreen  ">
+          <div class="Specifications-content-container ">
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/color.svg"><span>{{car.color}}</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/max-power.svg"><span>{{car.details.maxPower}} KW</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/Torque.svg"><span>{{car.details.torque}} N.m</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/weight.svg"><span>{{car.details.curbWeight}} Kg</span></li>
+
+            </ul>
+          </div>
+          <div class="Specifications-content-container ">
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1"  src="../../../assets/images/car-item/rang.svg"><span>{{car.details.cltC_CruisingRange}} Km</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/max-speed.svg"><span>{{car.details.maximumSspeed}} Km/h</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/battery-energy.svg"><span>{{car.details.batteryEnergy}} KWh</span></li>
+              <li class="d-flex justify-content-start align-items-center"><img class="detail-icon px-1" src="../../../assets/images/car-item/Acceleration.svg"><span>{{car.details.acceleration}} s</span></li>
+          </ul>
+          </div>
+      </div>
+      </div>
+      <div class="card-footer  d-flex justify-content-between align-items-center ">
+        <small  class=" text-darkGreen price">Price: {{car.price}} <small>LE</small></small>
+        <a  routerLink="/cars/detail/{{car.id}}" class="btn bg-Green px-4 card-link">Details</a>
+      </div>
+    </div>

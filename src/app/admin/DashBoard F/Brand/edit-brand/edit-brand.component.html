@@ -1,0 +1,16 @@
+<div class="container py-5">
+    <form class="form" [formGroup]="form">
+        <div class="form-group py-2">
+            <input type="text" class="form-control" formControlName="name" placeholder="Brand Name">
+            <div class="validation" *ngIf="form.controls['name'].errors"><small class="text-danger">Required</small></div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">photo</label>
+            <input type="file" #files class="form-control" formControlName="imageUrl" (change)="onFileSelected($event)"#fileUpload >
+        </div>
+        <div class="py-5" >
+            <button type="submit" [disabled]="form.invalid" class="btn btn-success" (click)="EditBrand()">Save Changes</button>
+        </div>
+        
+    </form>
+</div> 

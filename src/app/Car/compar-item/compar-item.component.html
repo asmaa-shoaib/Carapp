@@ -1,0 +1,21 @@
+<aside>
+
+<div *ngIf="car" class="car">
+    <h2>{{car.details.description}}</h2>
+    <ul class="list-unstyled">
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>Color</span><span>{{car.color}}</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>max Power</span><span>{{car.details.maxPower}} KW</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>torque</span><span>{{car.details.torque}} N.m</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>dimentions</span><span>{{car.details.length}}*{{car.details.width}}*{{car.details.height}}</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>curbWeight</span><span>{{car.details.curbWeight}} Kg</span></li> 
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>panoramic</span><span>{{car.details.panoramic}}</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>cltC_Cruising Range</span><span>{{car.details.cltC_CruisingRange}} Km</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>maximum speed</span><span>{{car.details.maximumSspeed}} Km/h</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>battery Energy</span><span>{{car.details.batteryEnergy}} KWh</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>acceleration</span><span>{{car.details.acceleration}} s</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>cameras</span><span>{{car.details.cameras}}</span></li>
+        <li class="d-flex justify-content-between  py-3 border-bottom"><span>price</span><span>{{car.price}} LE</span></li>
+
+    </ul>
+</div>    
+</aside>

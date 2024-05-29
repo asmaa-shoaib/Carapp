@@ -1,0 +1,15 @@
+<section class="py-5">
+    <div class="container">
+        <div class="cars">
+            <div class="row">
+                <h1 *ngFor="let car in RandomCar"> {{car.name}}</h1>
+                <div class="col-2" *ngFor="let car of RandomCars">
+                    <app-card [ParamNum]="car.id"></app-card>
+                </div>
+                <div class="col-2 card flex-column justify-content-center align-items-center  seeMore">
+                    <a class="text-decoration-none text-white"  routerLink="/cars/all">see more cars</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

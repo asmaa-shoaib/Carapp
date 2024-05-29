@@ -1,0 +1,19 @@
+<div class="container py-5">
+    <div class="row py-5">
+        <div class="col-lg-5 col-md-7 col-11 mx-auto">
+            
+    <form [formGroup]="loginForm" class="form bg-secondary rounded-3 bg-light shadow-lg p-5">
+        <h2 class="d-md-inline-block d-lg-block  text-lg-center px-3 text-darkGreen">login form</h2>
+        <p class="alert alert-danger" *ngIf="alert_error">password or mail is wrong</p> 
+       <div class="form-group pb-3">
+            <input type="text" formControlName="email" placeholder="mail" class="form-control"/>    
+        </div>
+        <div class="form-group pb-3">
+            <input type="password" formControlName="password" placeholder="password" class="form-control"/>    
+        </div>
+        <button class="btn bg-Green" [disabled]="loginForm.invalid" (click)="Login()">Login</button>
+
+    </form>
+        </div>
+    </div>
+</div>

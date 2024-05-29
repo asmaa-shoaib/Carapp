@@ -1,0 +1,30 @@
+<div class="container py-5">
+
+    <div class="btns py-3"><button routerLink="/dashboard/addbranch" class="btn btn-success">Add Branch</button></div>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>s</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>location</th>
+                <th>mobile</th>
+                <th>phone</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let branch of Branches;let c =index">
+                <td>{{c}}</td>
+                <td>{{branch.id}}</td>
+                <td>{{branch.name}}</td>
+                <td>{{branch.location}}</td>
+                <td>{{branch.mobile}}</td>
+                <td>{{branch.phone1}}<span *ngIf="branch.phone2!=null && branch.phone2!=0"> | {{branch.phone2}}</span></td>
+                <td><button class="btn btn-success" routerLink="/dashboard/branches/edit/{{branch.id}}">Edit</button></td>
+              
+            </tr>
+        </tbody>
+    </table>
+    </div>

@@ -1,0 +1,24 @@
+<!-- <section class="branches-section">
+</section> 
+<google-map height="600px" width="100%" [zoom]="zoom" [center]="center" [options]="options" >
+  <map-marker class="mark" *ngFor="let marker of markers" [position]="marker.position" ></map-marker>
+</google-map>
+
+<h1 #h1>asmaa</h1>
+<map-info-window>Hello Google Maps</map-info-window> -->
+
+
+<section class="branches-section ">
+  <div class="container">
+    <div class="branches-items">
+      <div class="row">
+        <div class="col-6  item-dot text-center" *ngFor="let branch of Branches">
+          <p> 1</p>
+          <div class="row"><div class="col-8 ms-0"  data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="bottom-bottom"><app-branch-item [ParamNum]="branch.id"></app-branch-item></div></div>
+        </div> 
+    </div>  
+    </div>
+  </div> 
+</section>
+
+ 

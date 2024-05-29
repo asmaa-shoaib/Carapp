@@ -1,0 +1,17 @@
+.seeMore{
+    background-image: url(../../../../assets/images/Home/2.jpg);
+    transition: all .5s;
+    background-size: cover ;
+    background-image: linear-gradient(0,0,0,.5);
+    filter: grayscale(.8);
+    a{
+        transition: all .5s;
+    }
+    &:hover a{
+        font-size: 1.2rem;
+    }
+    &:hover {
+        background-size: cover ;
+        filter: grayscale(0);
+    }
+}

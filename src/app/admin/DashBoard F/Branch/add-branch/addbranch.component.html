@@ -1,0 +1,49 @@
+<div class="container py-5">
+    <form class="form"  [formGroup]="myGroup"  >
+        <div class="form-group py-2">
+            <input type="text" class="form-control" formControlName="governoment" placeholder="Branch governoment"  >
+            <div class="form-valiation" *ngIf='myGroup.controls["governoment"].invalid && myGroup.controls["governoment"].touched ||myGroup.controls["governoment"].dirty' >
+                <small class="text-danger">required</small>
+            </div>
+        </div>
+        <div class="form-group py-2">
+            <input type="text" class="form-control" formControlName="name" placeholder="Branch Name"  >
+            <div class="form-valiation" *ngIf='myGroup.controls["name"].invalid && myGroup.controls["name"].touched ||myGroup.controls["name"].dirty' >
+                <small class="text-danger">required</small>
+            </div>
+        </div>
+        <div class="form-group py-2">
+            <input type="text" class="form-control"  formControlName="location"  placeholder="Branch Location" >
+            <div class="form-valiation" *ngIf='myGroup.controls["location"].invalid && myGroup.controls["location"].touched ||myGroup.controls["location"].dirty' >
+                <small class="text-danger">required</small>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="form-group col-4">
+                <input type="text" class="form-control" formControlName="mobile"  placeholder="Mobile">
+                <div class="form-valiation" *ngIf='myGroup.controls["mobile"].invalid && myGroup.controls["mobile"].touched ||myGroup.controls["mobile"].dirty' >
+                    <small class="text-danger" *ngIf='myGroup.controls["mobile"].hasError("required")'>required</small>
+                    <small class="text-danger" *ngIf='myGroup.controls["mobile"].hasError("pattern")'>wrong number</small>
+                </div>
+            </div>
+            <div class="form-group col-4">
+                <input type="text" class="form-control" formControlName="phone1" placeholder="phone"  >
+                <div class="form-valiation" *ngIf='myGroup.controls["phone1"].invalid && myGroup.controls["phone1"].touched ||myGroup.controls["phone1"].dirty' >
+                    <small class="text-danger" *ngIf='myGroup.controls["phone1"].hasError("required")'>required</small>
+                    <small class="text-danger" *ngIf='myGroup.controls["phone1"].hasError("pattern")'>wrong number</small>
+                </div>
+            </div>
+            <div class="form-group col-4">
+                <input type="text" class="form-control" formControlName="phone2" placeholder="extra phone"  >
+                <div class="form-valiation" *ngIf='myGroup.controls["phone2"].invalid && myGroup.controls["phone2"].touched ||myGroup.controls["phone2"].dirty' >
+                    <small class="text-danger" *ngIf='myGroup.controls["phone2"].hasError("required")'>required</small>
+                    <small class="text-danger" *ngIf='myGroup.controls["phone2"].hasError("pattern")'>wrong number</small>
+                </div>
+            </div>
+        </div>
+        <div class="py-5" >
+            <button type="submit" class="btn btn-success" [disabled]="myGroup.invalid" (click)="AddBranch()" >Add Branch</button>
+        </div>
+       
+    </form>
+</div>

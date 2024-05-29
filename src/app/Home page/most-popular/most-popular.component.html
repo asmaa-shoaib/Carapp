@@ -1,0 +1,35 @@
+
+<section class="py-5">
+    <h2 class="d-md-inline-block d-lg-block  text-lg-center px-3" data-aos="zoom-in" data-aos-easing="ease-in-sine">most popular</h2>
+    <div class="container py-3">
+          <div class="row gy-3 cars py-5">
+              <div class="col-sm-4 m-auto" *ngIf="mostPopularCars[0]" data-aos="fade-up-right"   data-aos-offset="100" data-aos-easing="ease-in-sine" >
+                <div class="active">
+                    <div class="car">
+                        <!-- <app-card  [ParamNum]=mostPopularCars[0].id></app-card> -->
+                        <app-car-item  [ParamNum]=mostPopularCars[0].id></app-car-item>
+                    </div> 
+                    <img class="img-fluid" src="https://localhost:7221/Uploads/Photoes/{{mostPopularCars[0].photoes[0].url}}" >
+                </div>
+              </div>
+              <div class="col-sm-4 m-auto" *ngIf="mostPopularCars[1]" data-aos="fade-up " data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="active">
+                    <div class="car">
+                       <!-- <app-card  [ParamNum]=mostPopularCars[1].id></app-card> -->
+                       <app-car-item  [ParamNum]=mostPopularCars[1].id></app-car-item>
+                    </div>
+                    <img class="img-fluid" src="https://localhost:7221/Uploads/Photoes/{{mostPopularCars[1].photoes[0].url}}">
+                </div>
+              </div> 
+              <div class="col-sm-4 m-auto" *ngIf="mostPopularCars[2]" data-aos="fade-up-left"  data-aos-offset="200" data-aos-easing="ease-in-sine">
+                <div class="active">
+                    <div class="car">
+                         <!-- <app-card  [ParamNum]=mostPopularCars[2].id></app-card> -->
+                         <app-car-item  [ParamNum]=mostPopularCars[2].id></app-car-item>
+                    </div>
+                    <img class="img-fluid" src="https://localhost:7221/Uploads/Photoes/{{mostPopularCars[2].photoes[0].url}}">
+                </div>
+              </div>
+          </div>
+      </div>
+</section> 

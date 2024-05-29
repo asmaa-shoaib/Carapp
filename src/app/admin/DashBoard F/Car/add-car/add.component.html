@@ -1,0 +1,24 @@
+
+<div class="container py-5">
+    <form class="form">
+        <div class="form-group">
+            <label class="form-label">Car-Name</label>
+            <input type="text" #name class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Car-Color</label>
+            <input type="text" #color class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Car-price</label>
+            <input type="number" #price class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Car-Brand</label>
+            <select class="form-select" #brandId>
+                <option *ngFor="let brand of Brands" value="{{brand.id}}" >{{brand.name}}</option>
+            </select>
+            <input type="submit" class="btn btn-success " value="Add New Car" (click)="AddCar(name.value,color.value,price.value,brandId.value)">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,64 @@
+ 
+ .branches{
+    position: relative;
+ }
+ .locations{
+    position: absolute; 
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+ .Oct{
+    position: absolute;
+    left: 524px;
+    top:666px ;
+ }
+ .nasrcity{
+    position: absolute;
+    left: 622px;
+    top:644px ;
+ }.thsetlement{
+    position: absolute;
+    left: 730px;
+    top:634px ;
+ }.gmsa{
+    position: absolute;
+    left: 736px;
+    top:50px ;
+ }.mansora{
+    position: absolute;
+    left: 697px;
+    top:221px ;
+ }
+map area:hover span{
+background: #000;
+}
+
+map-marker{
+   color: #000;
+   background-color: aqua !important   ;
+   width:50px;
+}
+.mark{
+   color: #000;
+   background-color: aqua !important   ;
+   width:50px;
+}
+.branches-section{
+   height: 100Vh;
+
+}
+
+.item-dot >div{
+   display: none;
+}
+
+.item-dot:hover >div{
+   display: inline-block;
+}
+.branches-section{
+   height: 90vh;
+   background: url(../../../assets/images/map/1.png)  repeat  center center / cover;
+   overflow: hidden;
+}

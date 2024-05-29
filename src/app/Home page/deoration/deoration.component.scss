@@ -1,0 +1,15 @@
+@import '../../../assets/Styles/colors';
+section{
+    height: 70vh;
+    background: url("../../../assets/images/Home/4.png") repeat  bottom center / cover !important;
+    background-attachment: fixed;
+    position: relative;
+}
+.overLay{
+    height: 100%;
+    width: 100%;
+    background-color: #021813a1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

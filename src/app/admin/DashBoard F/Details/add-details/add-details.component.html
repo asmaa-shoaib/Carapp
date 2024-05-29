@@ -1,0 +1,107 @@
+<div class="container py-5">
+    <form class="form"  [formGroup]="DetailObject"  >
+        <div class="row py-2 gy-3">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" formControlName="description" placeholder="description">
+                <div class="form-valiation" *ngIf='DetailObject.controls["description"].invalid && DetailObject.controls["description"].touched ||DetailObject.controls["description"].dirty' >
+                    <small class="text-danger">required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control"  formControlName="modelYear"  placeholder="modelYear" >
+                <div class="form-valiation" *ngIf='DetailObject.controls["modelYear"].invalid && DetailObject.controls["modelYear"].touched ||DetailObject.controls["modelYear"].dirty' >
+                    <small class="text-danger">required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="maxPower"  placeholder="maxPower">
+                <div class="form-valiation" *ngIf='DetailObject.controls["maxPower"].invalid && DetailObject.controls["maxPower"].touched ||DetailObject.controls["maxPower"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["maxPower"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="torque" placeholder="torque"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["torque"].invalid && DetailObject.controls["torque"].touched ||DetailObject.controls["torque"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["torque"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4  ">
+                <div class="row gy-md-3">
+                    <div class="form-group col-md-4">
+                        <input type="number" class="form-control" formControlName="width" placeholder="width"  >
+                        <div class="form-valiation" *ngIf='DetailObject.controls["width"].invalid && DetailObject.controls["torque"].touched ||DetailObject.controls["width"].dirty' >
+                            <small class="text-danger" *ngIf='DetailObject.controls["width"].hasError("required")'>required</small>
+                        </div>
+                    </div>
+                    <div class="form-group  col-md-4">
+                        <input type="number" class="form-control" formControlName="height" placeholder="height"  >
+                        <div class="form-valiation" *ngIf='DetailObject.controls["height"].invalid && DetailObject.controls["height"].touched ||DetailObject.controls["height"].dirty' >
+                            <small class="text-danger" *ngIf='DetailObject.controls["height"].hasError("required")'>required</small>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4"> 
+                        <input type="number" class="form-control" formControlName="length" placeholder="length"  >
+                        <div class="form-valiation" *ngIf='DetailObject.controls["length"].invalid && DetailObject.controls["length"].touched ||DetailObject.controls["length"].dirty' >
+                            <small class="text-danger" *ngIf='DetailObject.controls["length"].hasError("required")'>required</small>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="curbWeight" placeholder="curb Weight"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["curbWeight"].invalid && DetailObject.controls["curbWeight"].touched ||DetailObject.controls["curbWeight"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["curbWeight"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="batteryEnergy" placeholder="battery Energy"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["batteryEnergy"].invalid && DetailObject.controls["batteryEnergy"].    touched ||DetailObject.controls["batteryEnergy"].dirty' >
+                    <small class="text-danger">required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control"  formControlName="cltC_CruisingRange"  placeholder="cltC_Cruising Range" >
+                <div class="form-valiation" *ngIf='DetailObject.controls["cltC_CruisingRange"].invalid && DetailObject.controls ["cltC_CruisingRange"].touched ||DetailObject.controls["cltC_CruisingRange"].dirty' >
+                    <small class="text-danger">required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="maximumSspeed"  placeholder="maximumSspeed">
+                <div class="form-valiation" *ngIf='DetailObject.controls["maximumSspeed"].invalid && DetailObject.controls["maximumSspeed"].touched ||DetailObject.controls["maximumSspeed"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["maximumSspeed"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="cameras" placeholder="cameras"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["cameras"].invalid && DetailObject.controls["cameras"].touched ||DetailObject.controls["cameras"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["cameras"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" class="form-control" formControlName="acceleration" placeholder="acceleration"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["acceleration"].invalid && DetailObject.controls["acceleration"].touched ||DetailObject.controls["acceleration"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["acceleration"].hasError("required")'>required</small>
+                    
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" formControlName="panoramic" placeholder="panoramic"  >
+                <div class="form-valiation" *ngIf='DetailObject.controls["panoramic"].invalid && DetailObject.controls["panoramic"].touched ||DetailObject.controls["panoramic"].dirty' >
+                    <small class="text-danger" *ngIf='DetailObject.controls["panoramic"].hasError("required")'>required</small>
+                </div>
+            </div>
+            <div class="form-group col-12">
+                <select class="form-select" formControlName="carId" #carId>
+                    <option *ngFor="let car of cars" value="{{car.id}}" >{{car.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="py-5" >
+            <button type="submit" class="btn btn-success" (click)="AddDetail(carId.value)" >Add Detail</button>
+        </div>
+       
+    </form>
+</div>
+<!-- 
+[disabled]="DetailObject.invalid"  -->

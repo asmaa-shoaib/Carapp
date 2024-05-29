@@ -1,0 +1,31 @@
+<section class="py-5   branches-section">
+    <div class="container">
+        <h2 class=" d-md-inline-block d-lg-block  text-lg-center px-3 text-darkGreen" data-aos="fade-up"> our Branches</h2>
+        <div class="row py-4 gy-4">
+            <div class="col-lg-8 col-md-12 py-lg-5"   data-aos="fade-right">
+                <img class="img-fluid rounded" src="../../../assets/images/map/1x/1.png">
+                <div class="d-lg-none d-flex flex-row justify-content-between py-3">
+                <span  *ngFor="let branch of Branches" class="branchName text-darkGreen" (click)="showBranch(branch.id)">
+                    {{branch.name}}
+                </span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 py-lg-5 "   data-aos="fade-left">
+                <div class="d-lg-inline-block d-none" >
+                    <ul class="list-unstyled">
+                        <li *ngFor="let branch of Branches"><small class="branchName text-darkGreen" (click)="showBranch(branch.id)">{{branch.name}}</small></li>
+                    </ul>
+                </div>
+                  <!--  -->
+                <div class="row">
+                        <div *ngIf="!branch" class="col-12 ms-0">
+                        <app-branch-item [ParamNum]=1 ></app-branch-item>
+                    </div>
+                    <div *ngIf="branch" class="col-12 ms-0"   >
+                        <app-branch-item [ParamNum]=branch.id></app-branch-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

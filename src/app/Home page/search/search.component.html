@@ -1,0 +1,86 @@
+<section class="vh-100 d-flex justify-content-center align-items-center  py-5">
+    <div class="container rounded p-5 bg-white ">
+        <button class="close btn fa fa-close fa-2x text-Green"></button>
+        <form class="form p-5"> 
+            <div class="row gy-4">
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">brand</label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select" #brandId aria-label="">
+                                <option *ngFor="let brand of Brands" value="{{brand.id}}">{{brand.name}}</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">car name</label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select"   #carId aria-label="">
+                                <option *ngFor="let car of Cars" value="{{car.id}}">{{car.name}}</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">Category</label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select" aria-label="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">from <small>EG</small></label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select" aria-label="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">to <small>EG</small></label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select" aria-label="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="form-group">
+                        <label id="_label" for="">year</label>
+                        <div class="input-group mb-3">
+                            <select id="" name="" class="form-control form-select" aria-label="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="submit text-center pt-4">
+                <button class="btn bg-Green " (click)="GetResult(brandId.value,carId.value)">search now</button>
+            </div>
+        </form>
+  
+    </div>
+</section>

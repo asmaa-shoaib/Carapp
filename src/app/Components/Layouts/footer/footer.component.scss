@@ -1,0 +1,28 @@
+footer{
+    margin-bottom: 0;
+}
+ul li a{
+    position: relative;
+    transition: all .3s;
+}
+ul li a::before{
+    content: "";
+    height: 1.5px;
+    width: 0%;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    transition: all .3s;
+    
+}
+ul li a:hover{
+    font-weight: bold;  
+}
+ul li a:hover::before{
+    width: 100%; 
+}
+.tiktok img{
+    width:15px ;
+    height: 20px;
+}

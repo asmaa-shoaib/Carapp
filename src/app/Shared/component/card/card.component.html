@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-img-top">
+    <img src="https://localhost:7221/Uploads/Photoes/{{car.photoes[3].url}}" class="img-fluid">
+  </div>
+  <div class="card-text text-center">
+    <h6 class="card-title mx-auto text-darkGreen">
+      <small routerLink="/brands/details/{{car.brand.id}}">{{car.brand.name}}</small><small class="text-decoration-none"  routerLink="/cars/detail/{{car.id}}"> {{car.name}} {{car.details.modelYear}}</small>
+    </h6>
+  </div>
+</div>
+<!--  (click)=" Goto()" -->

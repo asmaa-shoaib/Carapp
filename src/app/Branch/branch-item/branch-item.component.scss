@@ -1,0 +1,11 @@
+@import '.././../../assets/Styles/colors';
+.custom-card{
+    border: .5px solid  $darkMain;
+    border-radius: 15px;
+    background-color: $light;
+}
+
+.detail-icon{
+    width: 22px;
+    height: 22px;
+}

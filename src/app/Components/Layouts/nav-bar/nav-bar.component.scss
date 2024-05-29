@@ -1,0 +1,92 @@
+@import '../../../../assets/Styles/colors';
+*{
+    box-sizing: border-box;
+}
+nav{
+    position: fixed;
+    z-index: 190;    
+    width:100vw;
+    transition: all .5s;
+    overflow: hidden !important;
+}
+.white-icon{
+    color: $light !important ;
+}
+.active{
+    font-weight: 700 !important;
+}
+.nav-link{
+   transition: color .5s;
+}
+@media screen and (min-width:992px){
+    nav{
+        position: fixed;
+        z-index: 190;   }
+    .nav-link:hover{
+        color:$main!important
+    }
+}
+@media screen and (max-width:992px){
+    nav{
+        background-color: $main;
+        position: fixed;
+        z-index: 190;
+    }
+    .navbar-brand{
+        width: 18% ;
+    }
+    .nav-link{
+        position: relative;
+        padding:auto 10px ;
+        transition:  all .5s; 
+    }
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        left: 0;
+        bottom: 0;
+        background: $light;
+        height: 2px;
+        transition: width .5s;  
+    }
+    .nav-link:hover::before{
+        width: 100%;
+    }
+    .nav-link:hover{
+        padding: 20px;
+        font-weight: 900;
+    }
+}
+.scrolledNav{
+    position: fixed;
+    box-shadow: 3px 3px 10px #00000056;
+    background: $light !important;
+    
+    .nav-link{
+        color: $main  !important;
+    }
+    .nav-link:hover{
+        color: $light !important;
+        background-color: $main ;
+        border-radius: 5px;
+    }
+    .nav-link:hover::before{
+        width: 0;
+    }
+    .nav-btn{
+        border: 1px solid $main !important;
+        color: $light !important;
+        background-color: $main !important;
+    }
+    .nav-btn:hover{
+        border: 1px solid $main !important;
+        color: $main !important;
+        background-color: $light !important;
+    }
+    .compare:hover{
+        border: 1px solid $light !important;
+        background-color: transparent !important;
+        border-radius: 5px ;
+    }
+}

@@ -1,0 +1,16 @@
+ @import '.././../../assets/Styles/colors';
+.branches-section{
+  background-color: $lightGray;
+}
+ .branchName{
+    cursor:pointer;
+    font-size: 13px;
+    transition: all .5s;
+ }
+ .branchName:hover{
+   color: $main;
+   font-weight: 900;
+ }
+ .branchName:focus{
+    color: $secondary;
+  }

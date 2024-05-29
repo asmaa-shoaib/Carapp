@@ -1,0 +1,45 @@
+@import '../../../assets/Styles/colors';
+
+*{
+    box-sizing: border-box ;
+}
+h2{
+    position: relative;
+}
+.Brands .carousel-control-prev{
+    background-image: linear-gradient(to right,$light,$light,rgba(255, 255, 255, 0));
+    width: 50px;
+}
+.Brands .carousel-control-next{
+    background-image: linear-gradient(to left,$light,$light,rgba(255, 255, 255, 0));
+    width: 50px;
+}
+.Brands .carousel-item img{
+    width: 80%;
+}
+@media screen and (min-width:992px) {
+    .carousel-inner{
+        overflow: visible;
+    }
+    .brands-section{
+        min-height: 30vh;
+        max-height: 40vh;
+        overflow: hidden;
+    }
+    .Brands .carousel-item img{
+        width: 40%;
+        height: auto;
+        transition: transform .2s;
+    }
+    img:hover {
+        width: 45%;
+        transform: scale(1.2,1.2);
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .Brands .carousel-control-next,.Brands .carousel-control-prev{
+         width: 25px;
+    }
+}
+

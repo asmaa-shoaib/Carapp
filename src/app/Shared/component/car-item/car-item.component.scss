@@ -1,0 +1,43 @@
+
+.overLay{
+    height: 100%;
+    width: 100%;
+    background-color: #021813c3;
+    transition: all .5s
+}
+.detail-icon{
+    width: 22px;
+    height: 22px;
+}
+.card-img-top{
+    transform: scale(1);
+    transition: all .5s;
+}
+.card-img-container:hover .overLay{
+
+  background-color: #02181300;
+}
+.card-img-container:hover .card-img-top{
+  transform: scale(1.1);
+}
+@media screen and (min-width:576px) and (max-width:768px){
+    .price{
+        display: none !important;
+    }
+    .Specifications-content{
+        display: none !important;
+    }
+    .card-footer{
+        display: none !important;
+    }
+}
+// @media screen and (max-width:768px) {
+//     .price{
+//         display: none !important;
+//     }
+//     .Specifications-content{
+//         display: none !important;
+//     }
+// }
+
+

@@ -1,0 +1,16 @@
+
+<div class="container">
+    <form class="form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="form-label">photo</label>
+            <input type="file" #files class="form-control" (change)="onFileSelected($event)" >
+        </div>
+        <div class="form-group">
+            <label class="form-label">Car</label>
+            <select class="form-select" #carId>
+                <option *ngFor="let car of Cars" value="{{car.id}}" >{{car.name}}</option>
+            </select>
+            <button type="button" class="btn btn-success"  (click)=" AddPhoto(carId.value)">Add New photo</button>
+        </div>
+    </form>
+</div>
